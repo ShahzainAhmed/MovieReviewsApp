@@ -35,6 +35,7 @@ class MovieTilesState extends State<MovieTiles> {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
+      physics: const BouncingScrollPhysics(),
       padding: EdgeInsets.symmetric(horizontal: 20.w),
       separatorBuilder: (context, index) => SizedBox(width: 20.w),
       scrollDirection: Axis.horizontal,

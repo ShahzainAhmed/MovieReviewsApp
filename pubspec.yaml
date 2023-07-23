@@ -42,6 +42,8 @@ dependencies:
   flutter_svg: ^2.0.5
   floating_bottom_navigation_bar: ^1.5.2
   http: ^1.1.0
+  drop_shadow_image: ^0.9.1
+  palette_generator: ^0.3.3+2
 
 dev_dependencies:
   flutter_test:
