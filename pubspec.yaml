@@ -44,6 +44,11 @@ dependencies:
   http: ^1.1.0
   drop_shadow_image: ^0.9.1
   palette_generator: ^0.3.3+2
+  device_preview: ^1.1.0
+  like_button: ^2.0.5
+  bounce: ^1.0.2
+  animated_text_kit: ^4.2.2
+  animate_do: ^3.3.4
 
 dev_dependencies:
   flutter_test:
