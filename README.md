@@ -5,5 +5,5 @@ https://www.linkedin.com/feed/update/urn:li:activity:7182492630012805121/
 
 ### Preview:
 <div align="center">
-  <video src="https://github.com/ShahzainAhmed/MovieReviewsApp/assets/59369881/89eed6b6-b7f0-4011-9c56-6534b96bc2b0" width=100/>
+  <video src="https://github.com/ShahzainAhmed/MovieReviewsApp/assets/59369881/b2347793-5193-4482-b0f5-6e1d80c5e08c" width=100/>
 <div/>
