@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -5,7 +6,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:pluton_test_mvc/app/data/constants/app_assets.dart';
 import 'package:pluton_test_mvc/app/data/constants/app_colors.dart';
 import 'package:pluton_test_mvc/app/data/constants/app_typography.dart';
-import 'package:pluton_test_mvc/app/modules/home/components/movies_horizontal_list.dart';
+import 'package:pluton_test_mvc/app/modules/home/widgets/movies_horizontal_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -27,12 +28,14 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: Get.height * 0.5,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(AppAssets.kMain),
-                  fit: BoxFit.cover,
+            Pulse(
+              child: Container(
+                height: Get.height * 0.45,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(AppAssets.kMain),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
@@ -51,7 +54,6 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 250.h,
               child: const MovieTiles(),
             ),
-            SizedBox(height: 50.h),
           ],
         ),
       ),

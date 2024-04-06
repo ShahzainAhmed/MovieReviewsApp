@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -43,36 +44,42 @@ class MovieTilesState extends State<MovieTiles> {
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () => Get.to(const DetailScreen(), arguments: movies[index]),
-          child: SizedBox(
-            width: 130.w,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  height: 160.h,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(movies[index]['Images'][1]),
-                      fit: BoxFit.cover,
+          child: FadeInUp(
+            duration: const Duration(milliseconds: 600),
+            child: SizedBox(
+              width: 130.w,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Hero(
+                    tag: movies[index]['Title'],
+                    child: Container(
+                      height: 160.h,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: NetworkImage(movies[index]['Images'][1]),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 10.h),
-                Text(
-                  movies[index]['Title'],
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: AppTypography.kMedium12.copyWith(
-                    color: AppColors.kWhiteColor,
+                  SizedBox(height: 10.h),
+                  Text(
+                    movies[index]['Title'],
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTypography.kMedium12.copyWith(
+                      color: AppColors.kWhiteColor,
+                    ),
                   ),
-                ),
-                Text(
-                  movies[index]['Year'],
-                  style: AppTypography.kMedium10.copyWith(
-                    color: AppColors.kGreyColor,
-                  ),
-                )
-              ],
+                  Text(
+                    movies[index]['Year'],
+                    style: AppTypography.kMedium10.copyWith(
+                      color: AppColors.kGreyColor,
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         );

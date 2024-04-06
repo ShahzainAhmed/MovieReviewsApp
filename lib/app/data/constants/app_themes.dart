@@ -16,8 +16,10 @@ class Themes {
     //   selectedItemColor: AppColors.kPrimaryColor,
     //   unselectedItemColor: AppColors.kGreyColor,
     // ),
-    bottomSheetTheme:
-        const BottomSheetThemeData(backgroundColor: Colors.transparent),
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: Colors.transparent,
+      surfaceTintColor: Colors.transparent,
+    ),
   );
 }
 
