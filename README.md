@@ -1,4 +1,4 @@
-# MovieApp with the integration of API
+# Movie Reviews App
 
 ### LinkedIn Post:
 https://www.linkedin.com/feed/update/urn:li:activity:7182492630012805121/
